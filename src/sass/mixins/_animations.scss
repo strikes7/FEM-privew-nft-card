@@ -1,0 +1,7 @@
+@mixin transitionColor {
+  transition: color 0.25s ease-in-out;
+}
+
+@mixin transitionOpacity {
+  transition: opacity 0.25s ease-in-out;
+}

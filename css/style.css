@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  display: flex;
+  min-block-size: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nft-card {
+  box-sizing: border-box;
+  inline-size: 21.875rem;
+  background-color: hsl(216, 50%, 16%);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+.nft-card__thumbnail {
+  display: block;
+  inline-size: 100%;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.nft-card__thumbnail::after {
+  display: flex;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsla(178, 100%, 50%, 0.4) url("../images/icon-view.svg") no-repeat center;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.nft-card__thumbnail:hover::after {
+  opacity: 1;
+}
+.nft-card__thumbnail__image {
+  inline-size: 100%;
+  display: block;
+  object-fit: cover;
+}
+.nft-card__title {
+  margin-block: 1.75rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  transition: color 0.25s ease-in-out;
+}
+.nft-card__title:hover {
+  color: hsl(178, 100%, 50%);
+}
+.nft-card__paragraph {
+  margin-block: 0;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: hsl(215, 51%, 70%);
+}
+
+.eth {
+  font-size: 1rem;
+  border-block-end: 1px solid hsl(215, 32%, 27%);
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.75rem;
+}
+.eth__price, .eth__time-left {
+  margin-block: 0;
+}
+.eth__price::before, .eth__time-left:before {
+  block-size: 1em;
+  inline-size: 1em;
+  margin-inline-end: 0.5rem;
+  vertical-align: middle;
+}
+.eth__price {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: hsl(178, 100%, 50%);
+}
+.eth__price::before {
+  content: url("../images/icon-ethereum.svg");
+}
+.eth__time-left {
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+.eth__time-left::before {
+  content: url("../images/icon-clock.svg");
+}
+
+.author {
+  padding-block-start: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.author__thumbnail {
+  box-sizing: border-box;
+  block-size: 2.125rem;
+  inline-size: 2.125rem;
+  margin-inline-end: 1rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  object-fit: cover;
+  border-radius: 100%;
+}
+.author__text {
+  color: hsl(215, 51%, 70%);
+}
+.author__name {
+  color: hsl(0, 0%, 100%);
+  transition: color 0.25s ease-in-out;
+}
+.author__name:hover {
+  color: hsl(178, 100%, 50%);
+}
